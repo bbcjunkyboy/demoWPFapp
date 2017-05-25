@@ -1,0 +1,92 @@
+﻿<Window x:Class="dummyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dummyApp"
+        mc:Ignorable="d"
+        Title="Dummy App" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <!-- title section-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Height="Auto" Width="Auto">
+                <Image.Source>
+                    <BitmapImage UriSource="/img/Project_logo_280x280.bmp"/>
+                </Image.Source>
+            </Image>
+            <TextBlock Grid.Column="1" FontSize="20" Text="BD Fishpedia"/>
+        </Grid>
+        <!-- title section close-->
+
+        <!--body section-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.7*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--list panel-->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="searchBox" Grid.Row="0" Text="Search"
+                         Foreground="Gray" FontSize="25"/>
+                    <Button Content="" Grid.Column="1"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TabControl>
+                        <TabItem Header="Dictionary">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Thesaurus">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+
+            </Grid>
+            <!--list panel close-->
+
+
+            <!--info/text panel-->
+            <Grid Grid.Column="1">
+
+            </Grid>
+            <!--info/text panel close-->
+            
+        </Grid>
+        <!--body section close-->
+        
+    </Grid>
+</Window>
